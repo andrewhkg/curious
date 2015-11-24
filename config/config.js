@@ -26,8 +26,8 @@ var config = {
     app: {
       name: 'wdi-express'
     },
-    port: 3000,
-    db: 'mongodb://127.0.0.1/wdi-express-production'
+    port: process.env.PORT,
+    db: process.env.MONGOLAB_URI
   }
 };
 
