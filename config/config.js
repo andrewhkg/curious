@@ -9,7 +9,7 @@ var config = {
       name: 'wdi-express'
     },
     port: 3000,
-    db: 'mongodb://localhost/wdi-express-development'
+    db: 'mongodb://127.0.0.1/wdi-express-development'
   },
 
   test: {
@@ -18,7 +18,7 @@ var config = {
       name: 'wdi-express'
     },
     port: 3000,
-    db: 'mongodb://localhost/wdi-express-test'
+    db: 'mongodb://127.0.0.1/wdi-express-test'
   },
 
   production: {
@@ -27,7 +27,7 @@ var config = {
       name: 'wdi-express'
     },
     port: 3000,
-    db: 'mongodb://localhost/wdi-express-production'
+    db: 'mongodb://127.0.0.1/wdi-express-production'
   }
 };
 
