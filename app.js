@@ -11,6 +11,10 @@ db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.db);
 });
 
+
+// var mongoUri =  process.env.MONGOLAB_URI || 'mongodb://localhost/wdi-express-development';
+// moongoose.connect(mongoUri);
+
 // Require all the models in our app
 var models = glob.sync(config.root + '/app/models/*.js');
 models.forEach(function (model) {
