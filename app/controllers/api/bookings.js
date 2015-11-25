@@ -1,10 +1,10 @@
 var express  = require('express');
 var router   = express.Router();
 var mongoose = require('mongoose');
-// var Booking = require('../../models/booking')
+var Booking = require('../../models/booking')
 
 module.exports = function (app) {
-  app.use('/', router);
+  app.use('/api', router);
 };
 
 function authenticatedUser(req, res, next) {
@@ -19,7 +19,7 @@ function authenticatedUser(req, res, next) {
 
 //INDEX
 router.get('/bookings', function (req, res){
-  Boooking.find({}, function (err, bookings){
+  Booking.find({}, function (err, bookings){
     if (err) {
       res.json({message: "There was an error with your GET request " + err});
     } else {
@@ -30,7 +30,7 @@ router.get('/bookings', function (req, res){
 
 //SHOW
 router.get('/bookings/:id', function (req, res){
-  Boooking.findById(req.params.id, function (err, booking){
+  Booking.findById(req.params.id, function (err, booking){
     if (err) {
       res.status(400).json({message: "There was an error with your GET request " + err});
     } else {
