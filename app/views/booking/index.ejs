@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row" id='attractions'>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // javascript
+  API.getBookings().then( function (data){
+    var bookings = data.bookings;
+    bookings.forEach(function (booking) {
+      console.log(booking);
+      console.log(booking.name, booking.picture, booking.description);
+
+      var html  = '<div class="col-sm-4 book-style">'
+          html +=   '<a href="/booking/new' + attraction._id + '">';
+          html +=     '<p data-id="' + attraction._id + '"">' + '<h4>' +attraction.name + '</h4>'+ '</p>';
+          html +=     '<img src="' + attraction.picture + '">';
+          html +=     '<p>' + attraction.description + '</p>';
+          html +=   '</a>';
+          html += '</div>';
+
+
+
+      $("#bookings").append(html);
+    })
+  }, errorHandling);
+
+</script>
+
+

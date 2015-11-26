@@ -8,8 +8,6 @@ var AttractionSchema = new Schema({
   price_adult:  { type: String},
   price_child:  { type: String},
   direction:    { type: String},
-  latitude:     { type: Number},
-  longitude:    { type: Number}
 });
 
 

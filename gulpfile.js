@@ -34,7 +34,6 @@ gulp.task('develop', function () {
 });
 
 gulp.task('default', [
-  'less',
   'develop',
   'watch'
 ]);

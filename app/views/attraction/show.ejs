@@ -1,0 +1,31 @@
+<h1>Attraction</h1>
+
+<div class ='supercontainer' align="center">
+  <div class="container" align="center">
+  </div>
+  <p id='book' align="center"><a href="/booking/new" class="btn btn-danger" role="button">BOOK</a></p>
+</div>
+<script type="text/javascript">
+  // javascript
+  var id = window.location.pathname.split("/")[2];
+
+  console.log("the ID is" + id);
+
+  function success (attraction){
+      console.log(attraction);
+      console.log(attraction.name, attraction.picture, attraction.description);
+
+      var html  = '<div class="col-sm-6">'
+          html +=  '<p>' + attraction.name + '</p>';
+          html +=  '<img class="responsive-image img-rounded" src="http://' + window.location.host + '/img/attractions/' + attraction.picture + ' ">';
+          html +=  '<p>' + attraction.description + '</p>';
+          html += '</div>';
+
+      $(".container").append(html);
+    }
+
+  API.getOneAttraction(id).then( success, errorHandling);
+
+</script>
+
+

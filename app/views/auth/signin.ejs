@@ -1,5 +1,12 @@
 <h2>Signin</h2>
 
+<div class = "button face" align="center">
+<form method="get" action="/auth/facebook">
+    <button class="btn btn-primary btn-lg" type="submit">Signin with Facebook</button>
+</form>
+</div>
+
+
 <% if (message.length > 0) { %>
   <div class="alert alert-danger"><%= message %></div>
 <% } %>
@@ -15,5 +22,12 @@
     <input class="form-control" type="password" name="password" id="password">
   </div>
 
-  <input class="btn btn-default" type="submit">
+  <input class="btn btn-default subm" type="submit">
 </form>
+
+<div class = "button" align="center">
+<p>SIGN UP NOW</p>
+<form method="get" action="/signup">
+    <button type="submit">Signup</button>
+</form>
+</div>

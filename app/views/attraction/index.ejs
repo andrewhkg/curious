@@ -1,0 +1,29 @@
+<h1 align="center">All Attractions</h1>
+<div class="container">
+  <div class="row" id='attractions'>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // javascript
+  API.getAttractions().then( function (data){
+    var attractions = data.attractions;
+    attractions.forEach(function (attraction) {
+      console.log(attraction);
+      console.log(attraction.name, attraction.picture, attraction.description);
+
+      var html  = '<div class="col-sm-6">'
+          html +=   '<a href="/attractions/' + attraction._id + '">';
+          html +=     '<p data-id="' + attraction._id + '"">' + '<h4>' +attraction.name + '</h4>'+ '</p>';
+          html +=     '<img class="responsive-image img-rounded" src="http://' + window.location.host + '/img/attractions/' + attraction.picture + ' ">';
+          html +=     '<p>' + attraction.description + '</p>';
+          html +=   '</a>';
+          html += '</div>';
+
+
+
+      $("#attractions").append(html);
+    })
+  }, errorHandling);
+
+</script>

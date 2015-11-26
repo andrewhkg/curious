@@ -1,7 +1,33 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Avenir", Helvetica, Arial, sans-serif;
 }
-a {
+/*a {
   color: #00B7FF;
+}
+*/
+h1 {
+  color: red;
+}
+
+h3, h4 {
+  text-align: center;
+  text-decoration: #450505;
+}
+
+.navbar-brand {
+  text-decoration: #450505;
+}
+
+.book-style {
+  text-align: center;
+}
+
+#attraction {
+  text-align: center;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: 234px;
 }
